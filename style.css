@@ -1,10 +1,10 @@
+
 :root {
     --primary-color: #5999b3;
     --secondary-color: #0265a7;
     --text-color: #333;
     --light-color: #f4f4f4;
     --dark-color: #2a3846;
-    --secondary-text-color: #666; /* Added missing variable */
     --transition: all 0.3s ease;
 }
 
@@ -15,32 +15,10 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    font-family: 'Playfair Display', serif;
+    line-height: 1.6;
+    color: var(--text-color);
 }
-
-header {
-    background-image: url('puspa.jpeg'); /* ganti 'path-ke-foto-anda.jpg' dengan nama file gambar */
-    background-size: cover;
-    color: white;
-    padding: 100px 0;
-    text-align: center;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    background-color: #0077a2;
-    padding: 10px;
-}
-
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-}
-
 
 /* Utility Classes */
 .container {
@@ -49,7 +27,6 @@ nav a {
     padding: 0 20px;
 }
 
-/* Section Title */
 .section-title {
     text-align: center;
     font-size: 2.5rem;
@@ -106,8 +83,7 @@ nav a {
     transition: var(--transition);
 }
 
-.nav-link:hover,
-.nav-link:focus { /* Added focus state for accessibility */
+.nav-link:hover {
     color: var(--secondary-color);
 }
 
@@ -123,13 +99,14 @@ nav a {
     height: 100vh;
     width: 100vw;
     background: url('puspa.jpeg') center/cover no-repeat;
+    background-size: cover;
     display: flex;
     align-items: center;
 }
 
 .hero {
     height: 100vh;
-    background: linear-gradient(to right, rgba(44, 62, 80, 0.7), rgba(44, 88, 88, 0)); /* Changed 44 to 0.7 for better visibility */
+    background: linear-gradient(to right, rgba(44, 62, 80, 44), rgba(44, 88, 88, 0)); 
     display: flex;
     align-items: center; 
     justify-content: flex-start; 
@@ -174,8 +151,7 @@ nav a {
     transition: var(--transition);
 }
 
-.social-link:hover,
-.social-link:focus { /* Added focus state for accessibility */
+.social-link:hover {
     color: var(--secondary-color);
 }
 
@@ -258,6 +234,34 @@ nav a {
     margin-bottom: 1rem;
 }
 
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Section Title and Description */
+.section-title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.section-description {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--secondary-text-color);
+    margin-bottom: 3rem;
+}
+
 /* Portfolio Grid */
 .portfolio-grid {
     display: grid;
@@ -330,7 +334,7 @@ nav a {
 }
 
 .btn-primary:hover {
-    background: #4a8fa1; /* Manually defined darker shade */
+    background: darken(var(--primary-color), 10%);
 }
 
 .btn-secondary {
@@ -338,8 +342,9 @@ nav a {
 }
 
 .btn-secondary:hover {
-    background: #024a7d; /* Manually defined darker shade */
+    background: darken(var(--secondary-color), 10%);
 }
+
 
 /* Footer */
 #footer {
@@ -419,3 +424,4 @@ nav a {
 .contact-content {
     animation: fadeIn 1s ease-out;
 }
+
