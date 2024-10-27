@@ -1,10 +1,10 @@
-
 :root {
     --primary-color: #5999b3;
     --secondary-color: #0265a7;
     --text-color: #333;
     --light-color: #f4f4f4;
     --dark-color: #2a3846;
+    --secondary-text-color: #666; /* Added missing variable */
     --transition: all 0.3s ease;
 }
 
@@ -27,6 +27,7 @@ body {
     padding: 0 20px;
 }
 
+/* Section Title */
 .section-title {
     text-align: center;
     font-size: 2.5rem;
@@ -83,7 +84,8 @@ body {
     transition: var(--transition);
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link:focus { /* Added focus state for accessibility */
     color: var(--secondary-color);
 }
 
@@ -99,14 +101,13 @@ body {
     height: 100vh;
     width: 100vw;
     background: url('puspa.jpeg') center/cover no-repeat;
-    background-size: cover;
     display: flex;
     align-items: center;
 }
 
 .hero {
     height: 100vh;
-    background: linear-gradient(to right, rgba(44, 62, 80, 44), rgba(44, 88, 88, 0)); 
+    background: linear-gradient(to right, rgba(44, 62, 80, 0.7), rgba(44, 88, 88, 0)); /* Changed 44 to 0.7 for better visibility */
     display: flex;
     align-items: center; 
     justify-content: flex-start; 
@@ -151,7 +152,8 @@ body {
     transition: var(--transition);
 }
 
-.social-link:hover {
+.social-link:hover,
+.social-link:focus { /* Added focus state for accessibility */
     color: var(--secondary-color);
 }
 
@@ -234,34 +236,6 @@ body {
     margin-bottom: 1rem;
 }
 
-/* General Styles */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-
-/* Section Title and Description */
-.section-title {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.section-description {
-    text-align: center;
-    font-size: 1rem;
-    color: var(--secondary-text-color);
-    margin-bottom: 3rem;
-}
-
 /* Portfolio Grid */
 .portfolio-grid {
     display: grid;
@@ -334,7 +308,7 @@ body {
 }
 
 .btn-primary:hover {
-    background: darken(var(--primary-color), 10%);
+    background: #4a8fa1; /* Manually defined darker shade */
 }
 
 .btn-secondary {
@@ -342,9 +316,8 @@ body {
 }
 
 .btn-secondary:hover {
-    background: darken(var(--secondary-color), 10%);
+    background: #024a7d; /* Manually defined darker shade */
 }
-
 
 /* Footer */
 #footer {
@@ -424,4 +397,3 @@ body {
 .contact-content {
     animation: fadeIn 1s ease-out;
 }
-
