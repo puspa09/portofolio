@@ -21,7 +21,7 @@ body {
 }
 
 header {
-    background-image: url('path-ke-foto-anda.jpg'); /* ganti 'path-ke-foto-anda.jpg' dengan nama file gambar */
+    background-image: url('puspa.jpeg'); /* ganti 'path-ke-foto-anda.jpg' dengan nama file gambar */
     background-size: cover;
     color: white;
     padding: 100px 0;
